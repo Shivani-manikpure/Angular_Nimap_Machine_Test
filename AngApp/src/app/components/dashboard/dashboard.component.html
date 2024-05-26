@@ -1,0 +1,74 @@
+<style>
+  /* Header styling */
+  app-header {
+    position: fixed; /* Fixed position */
+    top: 0; /* Top position */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure header is above content */
+  }
+
+  /* Sidebar styling */
+  app-sidebar {
+    position: fixed; /* Fixed position */
+    top: 60px; /* Top position (adjust based on header height) */
+    left: 0; /* Left position */
+    width: 250px; /* Sidebar width */
+    height: calc(100vh - 60px); /* Sidebar height */
+    overflow-y: auto; /* Allow vertical scrolling */
+    background-color: #8A2BE2; /* Purple background color */
+    z-index: 900; /* Ensure sidebar is above content */
+  }
+
+  /* Content area styling */
+  .col-md-9 {
+    margin-top: 60px; /* Top margin (adjust based on header height) */
+    margin-left: 250px; /* Left margin (equal to sidebar width) */
+    padding: 20px; /* Padding */
+    background-color: #f8f9fa; /* Light gray background color */
+  }
+
+  /* Footer styling */
+  app-footer {
+    position: fixed; /* Fixed position */
+    bottom: 0; /* Bottom position */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure footer is above content */
+  }
+
+  /* Ensure content area is not overlapped by fixed elements */
+  .container-fluid {
+    padding-top: 60px; /* Adjust based on header height */
+    padding-bottom: 60px; /* Adjust based on footer height */
+  }
+
+  /* Media query for smaller screens */
+  @media (max-width: 992px) {
+    app-sidebar {
+      display: none; /* Hide sidebar on smaller screens */
+    }
+
+    .col-md-9 {
+      margin-left: 0; /* Remove left margin */
+    }
+
+    .container-fluid {
+      padding-top: 0; /* Remove top padding */
+    }
+  }
+</style>
+
+
+<app-header></app-header>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <app-sidebar></app-sidebar>
+        
+    </div>
+        <div class="col-md-9" style="margin-top:100px">
+         <router-outlet>Dashboard</router-outlet> 
+        </div>
+  </div>
+</div>
+<app-footer></app-footer>

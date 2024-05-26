@@ -1,0 +1,86 @@
+<style>
+    /* Wrapper styling */
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8f9fa;
+    }
+  
+    /* Form block styling */
+    .block {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+  
+    /* Heading styling */
+    h3 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+  
+    /* Input field styling */
+    .inp {
+      width: calc(100% - 20px);
+      margin: 0 auto;
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+  
+    /* Button container styling */
+    .btns {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+  
+    /* Button styling */
+    .btns button {
+      width: 45%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: #fff;
+      transition: background-color 0.3s;
+    }
+  
+    .btns button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  
+
+<div class="wrapper">
+
+    <div class="block">
+   
+       
+         <form [formGroup]="register">
+
+               <h3>REGISTER HERE</h3>
+               <input type="text" placeholder="Enter First Name" class="inp" formControlName="Fname"/>
+               <input type="text" placeholder="Enter Last Name" class="inp" formControlName="Lname"/>
+               <input type="Mobile" placeholder="Enter Mobile" class="inp" formControlName="Mobile"/>
+               <input type="email" placeholder="Enter Email" class="inp" formControlName="email"/>
+               <input type="password" placeholder="Enter password" class="inp" formControlName="password"/>
+   
+               <div class="btns">
+                   <button (click)="registerSubmit()">SignUp</button>
+                   <button (click)="gotoLogin()">Login</button>
+               </div>
+   
+         </form>
+    </div>
+   
+   </div>
+   

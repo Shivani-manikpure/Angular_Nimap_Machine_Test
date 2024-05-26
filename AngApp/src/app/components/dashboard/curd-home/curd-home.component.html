@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  
+    .container {
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 80%;
+      max-width: 600px; 
+      background-color: #f8f9fa; 
+    }
+  
+    .form-control {
+      width: 100%;
+      margin-top: 5px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box; 
+    }
+  
+    .mb-3 {
+      margin-bottom: 20px;
+    }
+  
+    .form-check {
+      margin-top: 10px;
+    }
+  
+    .btn-primary {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  
+
+</head>
+<body>
+  <form>
+<div class="container">
+<form style="width: 80%; margin-left: 10%;" [formGroup]="questionForm">
+    
+    <div class="mb-3">
+        Exam Name :
+      <label for="exampleInputExamName" class="form-label"></label>
+      <input type="text" class="form-control" id="exampleInputExamName" placeholder="Enter Exam Name" formControlName="examname">
+    </div>
+    <div class="mb-3">
+        Subject :
+        <label for="exampleInputSubject" class="form-label"></label>
+        <input type="text" class="form-control" id="exampleInputSubject" placeholder="Enter Subject" formControlName="subject">
+      </div>
+      <div class="mb-3">
+        STD :
+        <label for="exampleInputSTD" class="form-label"></label>
+        <input type="text" class="form-control" id="exampleInputSTD" placeholder="Enter STD" formControlName="std">
+      </div>
+      <div class="mb-3">
+        Chapter Name :
+        <label for="exampleInputChaptername" class="form-label"></label>
+        <input type="text" class="form-control" id="exampleInputChapterName" placeholder="Enter Chapter Name" formControlName="chaptername">
+      </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="saveData()">Submit</button>
+  </form>
+</div>
+</form>
+</body>

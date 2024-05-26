@@ -1,0 +1,77 @@
+<style>
+    /* Wrapper styling */
+    .wrapper {
+      display: flex; /* Use flexbox */
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      height: 100vh; /* Full viewport height */
+      background-color: #f8f9fa; /* Light gray background color */
+    }
+  
+    /* Form styling */
+    .block {
+      background-color: #fff; /* White background color */
+      border-radius: 10px; /* Rounded corners */
+      padding: 20px; /* Padding */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow */
+    }
+  
+    /* Heading styling */
+    h2 {
+      margin-bottom: 20px; /* Bottom margin */
+      text-align: center; /* Center text */
+      color: #333; /* Dark text color */
+    }
+  
+    /* Input field styling */
+    .inp {
+      width: 100%; /* Full width */
+      margin-bottom: 10px; /* Bottom margin */
+      padding: 10px; /* Padding */
+      border: 1px solid #ccc; /* Border */
+      border-radius: 5px; /* Rounded corners */
+      box-sizing: border-box; /* Include padding in width */
+    }
+  
+    /* Button styling */
+    .btns {
+      display: flex; /* Use flexbox */
+      justify-content: space-between; /* Space evenly */
+    }
+  
+    .btns button {
+      width: 45%; /* Button width */
+      padding: 10px; /* Padding */
+      border: none; /* Remove border */
+      border-radius: 5px; /* Rounded corners */
+      cursor: pointer; /* Cursor on hover */
+      background-color: #007bff; /* Blue background color */
+      color: #fff; /* White text color */
+    }
+  
+    .btns button:hover {
+      background-color: #0056b3; /* Darker blue color on hover */
+    }
+  </style>
+  
+
+<div class="wrapper">
+
+ <div class="block">
+
+    
+      <form [formGroup]="login">
+            
+            <h2>LOGIN HERE</h2>
+            <input type="email" placeholder="Enter Email" class="inp" formControlName="email" required>
+            <input type="password" placeholder="Enter passward" class="inp" formControlName="password" required>
+
+            <div class="btns">
+                <button (click)="loginsubmit()">Login</button>
+                <button (click)="gotoSignup()">SignUp</button>
+            </div>
+
+      </form>
+ </div>
+
+</div>

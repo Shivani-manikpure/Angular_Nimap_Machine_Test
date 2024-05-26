@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+button{
+    padding: 15px 10px;
+    background-color: black;
+    margin-right: 5px;
+    color: white;
+    font-weight: 600;
+    width: 100px;
+    cursor: pointer;
+}
+button:disabled{
+    background-color: gray;
+    opacity: 0.8;
+    color: white;
+    cursor: not-allowed;
+}
+.block{
+    width: 350px;
+    background: linear-gradient(270deg,hotpink,red);
+    height: 500px;
+    display: flex;
+}
+.h2{
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+}
